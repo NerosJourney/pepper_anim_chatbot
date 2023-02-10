@@ -22,23 +22,23 @@ public class AnimationExecuter extends BaseQiChatExecutor {
     public void runWith(List<String> params) {
         Animation animation = AnimationBuilder.with(qiContext).withResources(R.raw.sugar).build();
         switch(params.get(0)) {
-            case "sugar":
+            case "pick up the sugar":
                 animation = AnimationBuilder.with(qiContext).withResources(R.raw.sugar).build();
                 break;
-            case "milk one":
+            case "pour the sugar":
+                animation = AnimationBuilder.with(qiContext).withResources(R.raw.sugarpt2).build();
+                break;
+            case "pick up the milk":
                 animation = AnimationBuilder.with(qiContext).withResources(R.raw.milk_0).build();
                 break;
-            case "milk two":
+            case "pour the milk":
                 animation = AnimationBuilder.with(qiContext).withResources(R.raw.milk_1).build();
                 break;
-            case "blender one":
-                animation = AnimationBuilder.with(qiContext).withResources(R.raw.blender_actions).build();
+            case "pick up the fruit":
+                animation = AnimationBuilder.with(qiContext).withResources(R.raw.fruit_1).build();
                 break;
-            case "blender two":
-                animation = AnimationBuilder.with(qiContext).withResources(R.raw.blender_action_pt2).build();
-                break;
-            case "fruit":
-                animation = AnimationBuilder.with(qiContext).withResources(R.raw.fruit).build();
+            case "pour the fruit":
+                animation = AnimationBuilder.with(qiContext).withResources(R.raw.fruit_2).build();
                 break;
             default:
                 break;
